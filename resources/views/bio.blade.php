@@ -49,7 +49,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-2">
-            <img src="{{ $photo }}" class="rounded-circle" width="80%">
+            <img src="" class="rounded-circle" width="80%">
           </div>
           <div class="col-md-6">
             Informasi Pribadi
@@ -60,35 +60,35 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col-md-6">Nama Lengkap</div>
-                    <div class="col-md-6">: {{ $nama }}</div>
+                    <div class="col-md-6">: {{ $bio->nama }}</div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">Tempat, Tanggal Lahir</div>
-                    <div class="col-md-6">: {{ $lahir }}</div>
+                    <div class="col-md-6">: {{ $bio->lahir }}</div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">Hobby</div>
-                    <div class="col-md-6">: {{ $hobi }}</div>
+                    <div class="col-md-6">: {{ $bio->hoby }}</div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">Jenis Kelamin</div>
-                    <div class="col-md-6">: {{ $jk }}</div>
+                    <div class="col-md-6">: {{ $bio->jk }}</div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">Agama</div>
-                    <div class="col-md-6">: {{ $hobi }}</div>
+                    <div class="col-md-6">: {{ $bio->agama }}</div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">Alamat</div>
-                    <div class="col-md-6">: {{ $alamat }}</div>
+                    <div class="col-md-6">: {{ $bio->alamat }}</div>
                  </div>
                   <div class="row">
                      <div class="col-md-6">Telp</div>
-                     <div class="col-md-6">: {{ $telp }}</div>
+                     <div class="col-md-6">: {{ $bio->telp }}</div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">Email</div>
-                    <div class="col-md-6">: {{ $email }}</div>
+                    <div class="col-md-6">: {{ $bio->email }}</div>
                  </div>
                 </div>
               </div>

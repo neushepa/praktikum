@@ -78,16 +78,20 @@
                         <td>{{ $siswa->alamat }}</td>
                         <td>{{ $siswa->telp }}</td>
                         <td>{{ $siswa->email }}</td>
-                        <td>
-                            <button type="button" class="btn btn-warning">Edit</button>
-                            <button type="button" class="btn btn-danger">Delete</button>
-                            <button type="button" class="btn btn-primary">Lihat</button>
+                        <td><form method="POST" action="{{ route('destroy-siswa',$siswa->id) }}">
+                            <a button type="button" class="btn btn-warning" href="{{ route('edit-siswa',$siswa->id) }}">Edit</button></a>
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                                <a button type="button" class="btn btn-primary" href="{{ route('show-bio',$siswa->id) }}">Lihat</button></a>
+                            </form>
                         </td>
                       </tr>
                     @endforeach
                 </tbody>
               </table>
-              <button type="button" class="btn btn-primary">Add New</button>
+              <a href="{{ route('add-siswa') }}">
+              <button type="button" class="btn btn-primary">Add New</button></a>
             </div>
         <div>
         <div>
