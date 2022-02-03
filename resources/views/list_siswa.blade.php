@@ -91,7 +91,7 @@
                 </tbody>
               </table>
               <a href="{{ route('add-siswa') }}">
-              <button type="button" class="btn btn-primary">Add New</button></a>
+              <button type="button" class="btn btn-primary">Tambah data baru</button></a>
             </div>
         <div>
         <div>

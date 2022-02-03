@@ -108,6 +108,7 @@ class BiodataController extends Controller
         $bio->alamat=$request->alamat;
         $bio->telp=$request->telp;
         $bio->email=$request->email;
+
         $bio->update();
         return redirect()->route('list');
     }
