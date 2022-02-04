@@ -23,26 +23,7 @@ Route::get('/belajar', function () {
     return 'Hello World';
 });
 
-// Route::get('/list', function () {
-//     return view('list_siswa');
-// });
-
-Route::get('/home', [HomeController::class, 'showgreeting']);
-
-// Route::get('/bio', function () {
-//     $data= [
-//         'nama'=>'Rio Andrianto',
-//         'lahir'=>'Bandung, 07 Desember 1992',
-//         'hobi'=>'Ngoding',
-//         'jk'=>'Laki-laki',
-//         'agama'=>'Islam',
-//         'alamat'=>'Mutiara Venue Estate MR No.10',
-//         'telp'=>'0857-2282-8810',
-//         'email'=>'r.andrianto@gmail.com',
-//         'photo'=>'../img/rio.jpg',
-//     ];
-//     return view('bio', $data);
-// });
+// Route::get('/home', [HomeController::class, 'showgreeting']);
 
 Route::get('/bio', [HomeController::class, 'index']);
 Route::get('/list', [BiodataController::class, 'index'])->name('list');
@@ -54,3 +35,7 @@ Route::delete('/delete/{id}', [BiodataController::class, 'destroy'])->name('dest
 Route::get('/bio/{id}', [BiodataController::class, 'show'])->name('show-bio');
 
 Route::get('/post', [PostController::class, 'index']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

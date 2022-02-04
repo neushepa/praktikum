@@ -1,102 +1,29 @@
 <?php
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 class HomeController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Create a new controller instance.
      *
-     * @return \Illuminate\Http\Response
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
     {
-        $data= [
-            'nama'=>'Rio Andrianto',
-            'lahir'=>'Bandung, 07 Desember 1992',
-            'hobi'=>'Ngoding',
-            'jk'=>'Laki-laki',
-            'agama'=>'Islam',
-            'alamat'=>'Mutiara Venue Estate MR No.10',
-            'telp'=>'0857-2282-8810',
-            'email'=>'r.andrianto@gmail.com',
-            'photo'=>'../img/rio.jpg',
+        $data=[
+            'greetings'=>'Selamat Datang',
+            'tittle'=>'Halaman Admin',
         ];
-        return view('bio', $data);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
-
-    public function showgreeting()
-    {
-        $data= [
-            'greetings'=>'Welcome to my website',
-        ];
-        return view('home', $data);
+        return view('home2', $data);
     }
 }
