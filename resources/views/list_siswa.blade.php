@@ -26,7 +26,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="/blog">Blog</a>
               </li>
+
               <a class="nav-link active" aria-current="page" href="/list">Siswa</a>
+
             </ul>
           </div>
         </div>

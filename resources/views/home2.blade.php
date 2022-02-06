@@ -30,9 +30,11 @@
                   Master Data
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                @if (Auth::user()->isadmin == 1)
                   <li><a class="dropdown-item" href="/list">List Siswa</a></li>
                   <li><a class="dropdown-item" href="#">List Post</a></li>
                   <li><hr class="dropdown-divider"></li>
+                @endif
                   <li><a class="dropdown-item" href="#">Halaman Member</a></li>
                 </ul>
               </li>
@@ -47,9 +49,11 @@
              </div>
         </div>
       </nav>
-    <center>{{ $greetings }}</center>
-    <center>{{ $tittle }}</center>
 
+    <h2>
+    <center>{{ $greetings }}</center>
+    <center>{{ (Auth::user()->isadmin == 1) ? $admin : $member }}</center>
+    </h2>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
