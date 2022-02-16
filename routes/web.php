@@ -12,18 +12,26 @@
 
 use App\Http\Controllers\BiodataController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LatihanController;
 use App\Http\Controllers\PostController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
+// Route::get('/susi', function () {
+//     return view('hallo');
+// });
+
 Route::get('/belajar', function () {
     return 'Hello World';
 });
 
 // Route::get('/home', [HomeController::class, 'showgreeting']);
+
+Route::get('/susi', [LatihanController::class, 'lihat']);
 
 Route::get('/bio', [HomeController::class, 'index']);
 Route::get('/list', [BiodataController::class, 'index'])->name('list');
